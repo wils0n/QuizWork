@@ -12,6 +12,8 @@
 		07771F711C9A587000240619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07771F6F1C9A587000240619 /* Main.storyboard */; };
 		07771F731C9A587000240619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07771F721C9A587000240619 /* Assets.xcassets */; };
 		07771F761C9A587000240619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07771F741C9A587000240619 /* LaunchScreen.storyboard */; };
+		07771F7E1C9A5EA100240619 /* ExrtaFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07771F7D1C9A5EA100240619 /* ExrtaFunctions.swift */; };
+		07771F801C9A5EBE00240619 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07771F7F1C9A5EBE00240619 /* QuizModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		07771F721C9A587000240619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07771F751C9A587000240619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07771F771C9A587000240619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07771F7D1C9A5EA100240619 /* ExrtaFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExrtaFunctions.swift; sourceTree = "<group>"; };
+		07771F7F1C9A5EBE00240619 /* QuizModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				07771F721C9A587000240619 /* Assets.xcassets */,
 				07771F741C9A587000240619 /* LaunchScreen.storyboard */,
 				07771F771C9A587000240619 /* Info.plist */,
+				07771F7D1C9A5EA100240619 /* ExrtaFunctions.swift */,
+				07771F7F1C9A5EBE00240619 /* QuizModel.swift */,
 			);
 			path = QuizWork;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07771F801C9A5EBE00240619 /* QuizModel.swift in Sources */,
 				07771F6E1C9A586F00240619 /* ViewController.swift in Sources */,
+				07771F7E1C9A5EA100240619 /* ExrtaFunctions.swift in Sources */,
 				07771F6C1C9A586F00240619 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
