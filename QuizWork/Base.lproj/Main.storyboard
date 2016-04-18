@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -91,16 +91,16 @@
                                         </connections>
                                     </button>
                                     <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZs-nq-NqA">
-                                        <rect key="frame" x="40" y="54" width="241" height="172"/>
+                                        <rect key="frame" x="40" y="54" width="241" height="194"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksc-My-iwi">
-                                                <rect key="frame" x="8" y="8" width="233" height="86"/>
+                                                <rect key="frame" x="8" y="63" width="233" height="81"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqx-n0-G7r">
-                                                <rect key="frame" x="57" y="117" width="134" height="39"/>
+                                                <rect key="frame" x="57" y="145" width="134" height="39"/>
                                                 <color key="backgroundColor" red="0.46993923300000001" green="0.85651041670000005" blue="0.14484481190000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <state key="normal" title="Button">
@@ -110,6 +110,9 @@
                                                     <action selector="btnFeedbackAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="65n-Ql-ewP"/>
                                                 </connections>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kl5-0N-E8A">
+                                                <rect key="frame" x="90" y="2" width="60" height="60"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -126,6 +129,7 @@
                         <outlet property="btnAnswer3" destination="I3Y-XG-GXy" id="1k3-jH-gEV"/>
                         <outlet property="btnAnswer4" destination="rfn-o2-fhp" id="Oe9-xF-g5P"/>
                         <outlet property="btnFeedback" destination="gqx-n0-G7r" id="lHf-en-DK1"/>
+                        <outlet property="imgFeedback" destination="kl5-0N-E8A" id="ZTi-Kl-RaA"/>
                         <outlet property="lbFeedback" destination="ksc-My-iwi" id="2qy-4I-pN5"/>
                         <outlet property="lbQuestion" destination="gjK-dm-BL7" id="WOh-xi-Cqh"/>
                         <outlet property="progressView" destination="IH7-qJ-zzA" id="IJu-JI-dZg"/>

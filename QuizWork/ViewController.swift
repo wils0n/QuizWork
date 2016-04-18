@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewFeedback: UIView!
     @IBOutlet weak var lbFeedback: UILabel!
     @IBOutlet weak var btnFeedback: UIButton!
-    
+    @IBOutlet weak var imgFeedback: UIImageView!
     
     var questions: [Question]!
     
@@ -44,36 +44,36 @@ class ViewController: UIViewController {
         let q0answer3 = Answer(answer: "has", isCorrect: false)
         let question0 = Question(question: "Last year Rachel ...., so she is 23 now.", answers: [q0answer0, q0answer1, q0answer2, q0answer3])
         
-        let q1answer0 = Answer(answer: "5,5 m", isCorrect: true)
-        let q1answer1 = Answer(answer: "3,5 m", isCorrect: false)
-        let q1answer2 = Answer(answer: "4,5 m", isCorrect: false)
+        let q1answer0 = Answer(answer: "forgot", isCorrect: true)
+        let q1answer1 = Answer(answer: "forget", isCorrect: false)
+        let q1answer2 = Answer(answer: "have", isCorrect: false)
         let q1answer3 = Answer(answer: "has", isCorrect: false)
-        let question1 = Question(question: "Cuántos metros en promedio tiene una girafa macho adulta?", answers: [q1answer0, q1answer1, q1answer2, q1answer3])
+        let question1 = Question(question: "I'm so sorry, I ... your birthday.", answers: [q1answer0, q1answer1, q1answer2, q1answer3])
         
-        let q2answer0 = Answer(answer: "2300 kg", isCorrect: true)
-        let q2answer1 = Answer(answer: "3300 kg", isCorrect: false)
-        let q2answer2 = Answer(answer: "4300 kg", isCorrect: false)
-        let q2answer3 = Answer(answer: "has", isCorrect: false)
-        let question2 = Question(question: "Cuánto pesa en promedio un rinoceronte-branco macho adulto?", answers: [q2answer0, q2answer1, q2answer2, q2answer3])
+        let q2answer0 = Answer(answer: "speaks", isCorrect: true)
+        let q2answer1 = Answer(answer: "speak", isCorrect: false)
+        let q2answer2 = Answer(answer: "sspeaks", isCorrect: false)
+        let q2answer3 = Answer(answer: "speeak", isCorrect: false)
+        let question2 = Question(question: "She .... four languages.", answers: [q2answer0, q2answer1, q2answer2, q2answer3])
         
-        let q3answer0 = Answer(answer: "64 km/h", isCorrect: true)
-        let q3answer1 = Answer(answer: "74 km/h", isCorrect: false)
-        let q3answer2 = Answer(answer: "54 km/h", isCorrect: false)
-        let q3answer3 = Answer(answer: "54 km/h", isCorrect: false)
-        let question3 = Question(question: "1, 2, 3, ....", answers: [q3answer0, q3answer1, q3answer2, q3answer3])
+        let q3answer0 = Answer(answer: "teaches", isCorrect: true)
+        let q3answer1 = Answer(answer: "teach", isCorrect: false)
+        let q3answer2 = Answer(answer: "teachs", isCorrect: false)
+        let q3answer3 = Answer(answer: "teaach", isCorrect: false)
+        let question3 = Question(question: "Jane is a teacher. She .... French.", answers: [q3answer0, q3answer1, q3answer2, q3answer3])
 
         
-        let q4answer0 = Answer(answer: "64 km/h", isCorrect: true)
-        let q4answer1 = Answer(answer: "74 km/h", isCorrect: false)
-        let q4answer2 = Answer(answer: "54 km/h", isCorrect: false)
-        let q4answer3 = Answer(answer: "54 km/h", isCorrect: false)
-        let question4 = Question(question: "2, 4, 8, ...", answers: [q4answer0, q4answer1, q4answer2, q4answer3])
+        let q4answer0 = Answer(answer: "close", isCorrect: true)
+        let q4answer1 = Answer(answer: "closes", isCorrect: false)
+        let q4answer2 = Answer(answer: "cloose", isCorrect: false)
+        let q4answer3 = Answer(answer: "clooses", isCorrect: false)
+        let question4 = Question(question: "I always .... the window at night because it is cold.", answers: [q4answer0, q4answer1, q4answer2, q4answer3])
 
-        let q5answer0 = Answer(answer: "64 km/h", isCorrect: true)
-        let q5answer1 = Answer(answer: "74 km/h", isCorrect: false)
-        let q5answer2 = Answer(answer: "54 km/h", isCorrect: false)
-        let q5answer3 = Answer(answer: "54 km/h", isCorrect: false)
-        let question5 = Question(question: "2, 6, 12, ...", answers: [q5answer0, q5answer1, q5answer2, q5answer3])
+        let q5answer0 = Answer(answer: "costs", isCorrect: true)
+        let q5answer1 = Answer(answer: "cost", isCorrect: false)
+        let q5answer2 = Answer(answer: "cosst", isCorrect: false)
+        let q5answer3 = Answer(answer: "coosts", isCorrect: false)
+        let question5 = Question(question: "The food in Japan is expensive. It .... a lot to live there.", answers: [q5answer0, q5answer1, q5answer2, q5answer3])
 
         
         
@@ -83,8 +83,8 @@ class ViewController: UIViewController {
     }
     
     func startQuiz(){
-        //questions.shuffle()
-        for(var i=0; i < questions.count; i++){
+        questions.shuffle()
+        for(var i=0; i < questions.count; i=i+1){
             questions[i].answers.shuffle()
         }
         quizEnded = false
@@ -173,8 +173,10 @@ class ViewController: UIViewController {
         
           if(answer.isCorrect == true){
             grade = grade + 1.0
+            imgFeedback.image = UIImage(named: "happy")
             lbFeedback.text = answer.strAnswer + "\n\n Respuesta Correcta!"
           }else{
+            imgFeedback.image = UIImage(named: "frowning")
             lbFeedback.text = answer.strAnswer + "\n\n Respuesta Incorrecta..."
           }
         
@@ -206,7 +208,7 @@ class ViewController: UIViewController {
     }
     
     func nextQuestion(){
-        currentQuestion++
+        currentQuestion += 1
         if(currentQuestion < questions.count){
             showQuestion(currentQuestion)
         }else{
@@ -218,6 +220,12 @@ class ViewController: UIViewController {
         grade = grade/Double(questions.count)*100.0
         quizEnded = true
         viewFeedback.hidden = false
+        if (grade > 50.0){
+            imgFeedback.image = UIImage(named: "happy")
+        }else{
+            imgFeedback.image = UIImage(named: "frowning")
+        }
+        
         lbFeedback.text = "Su nota: \(grade)"
         btnFeedback.setTitle("Reintentar", forState: UIControlState.Normal)
     }
